@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.otp.fragments.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_otpFragment"
+            app:destination="@id/otpFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_editUserDetailsFragment"
+            app:destination="@id/editUserDetailsFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/otpFragment"
+        android:name="com.example.otp.fragments.OtpFragment"
+        android:label="fragment_otp"
+        tools:layout="@layout/fragment_otp" >
+        <argument
+            android:name="AuthCredentials"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_otpFragment_to_editUserDetailsFragment"
+            app:destination="@id/editUserDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editUserDetailsFragment"
+        android:name="com.example.otp.fragments.EditUserDetailsFragment"
+        android:label="fragment_edit_user_details"
+        tools:layout="@layout/fragment_edit_user_details" >
+        <action
+            android:id="@+id/action_editUserDetailsFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.otp.fragments.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_aboutUsFragment"
+            app:destination="@id/aboutUsFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_callBackComplaintListFragment"
+            app:destination="@id/callBackComplaintListFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_getCallBackFragment"
+            app:destination="@id/getCallBackFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_editUserDetailsFragment"
+            app:destination="@id/editUserDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/aboutUsFragment"
+        android:name="com.example.otp.fragments.AboutUsFragment"
+        android:label="AboutUsFragment" />
+    <fragment
+        android:id="@+id/callBackComplaintListFragment"
+        android:name="com.example.otp.fragments.CallBackComplaintListFragment"
+        android:label="CallBackComplaintListFragment" >
+        <action
+            android:id="@+id/action_callBackComplaintListFragment_to_callBackStatusFragment"
+            app:destination="@id/callBackStatusFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/getCallBackFragment"
+        android:name="com.example.otp.fragments.GetCallBackFragment"
+        android:label="GetCallBackFragment" />
+    <fragment
+        android:id="@+id/callBackStatusFragment"
+        android:name="com.example.otp.fragments.CallBackStatusFragment"
+        android:label="CallBackStatusFragment" >
+        <argument
+            android:name="itemStatus"
+            app:argType="integer" />
+        <argument
+            android:name="problemStatement"
+            app:argType="string" />
+        <argument
+            android:name="lastSeen"
+            app:argType="string" />
+    </fragment>
+</navigation>

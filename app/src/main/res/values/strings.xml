@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Systech Softwares</string>
+    <string name="title_activity_edit_user_details">EditUserDetailsActivity</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <!--
+    This string is used for square devices and overridden by hello_world in
+    values-round/strings.xml for round devices.
+    -->
+</resources>

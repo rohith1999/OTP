@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@drawable/ripple_effect"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:clickable="true"
+    android:focusable="true"
+    android:layout_marginTop="5dp"
+    android:layout_marginEnd="5dp"
+    android:layout_marginStart="5dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+
+    <TextView
+        android:id="@+id/single_item_staff"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Staff" />
+
+    <TextView
+        android:id="@+id/single_item_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Problem Statement"
+        android:textColor="#000001"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/single_item_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Time"
+        android:textColor="#1100B6" />
+
+</LinearLayout>
